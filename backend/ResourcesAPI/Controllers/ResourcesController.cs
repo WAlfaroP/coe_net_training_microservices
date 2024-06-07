@@ -43,7 +43,8 @@ namespace ResourcesAPI.Controllers
         }
 
         //        [HttpPut, HttpOptions]
-        [HttpPost("update"), HttpOptions]
+       // [HttpPost("update"), HttpOptions]
+        [HttpPut("update"), HttpOptions]
         public async Task<ActionResult<ResourceResponse>> Update(UpdateResourceRequest updateResourceRequest)
         {
             var r = await resourcesDbContext.Resources.FindAsync(updateResourceRequest.Id);

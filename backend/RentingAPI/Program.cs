@@ -38,6 +38,9 @@ var builder = WebApplication.CreateBuilder(args);
     });
 
     AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+                policy.WithOrigins("http://localhost:4200", "http://localhost:5173");
+            });
+    });
 }
 var app = builder.Build();
 {
